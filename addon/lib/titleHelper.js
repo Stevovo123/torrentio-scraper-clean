@@ -8,11 +8,6 @@ export function extractSize(title) {
   return seedersMatch && parseSize(seedersMatch[1]) || 0;
 }
 
-export function extractProvider(title) {
-  const match = title.match(/⚙.* ([^ \n]+)/);
-  return match?.[1]?.toLowerCase();
-}
-
 export function parseSize(sizeText) {
   if (!sizeText) {
     return 0;
